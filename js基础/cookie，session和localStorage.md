@@ -4,6 +4,8 @@
 
 - cookie 是浏览器访问服务器后，服务器传给浏览器的一段数据。 浏览器需要保存这段数据，不得轻易删除。此后每次浏览器访问该服务器，都必须带上这段数据。
 
+- Cookie含有访问的方式、时间、用户名密码等认证信息等，可以用https加密。
+
 - 解决http是无状态协议的问题
 
 - Cookie的主要内容包括，名字，值，过期时间，路径和域。key /value 形式的。
@@ -12,6 +14,8 @@
 
 - 一般浏览器存储cookie 最大容量为4k，所以大量数据不要存到cookie。
 
+- session文件是某个用户整个会话过程中数据。
+
 - 使用场合：
 
   会话状态管理：保存登录、购物车等需要记录的信息
@@ -19,6 +23,10 @@
   个性化设置：保存用户的偏好，比如网页的字体大小、背景色等等
 
   浏览器行为追踪：记录和分析用户行为
+
+- cookie可以在客户端删改，存放信息
+
+  - 获得cookie: document.cookie
 
 #### session:服务器端
 
@@ -35,6 +43,15 @@
 - localStorage有着比cookie更快速且容量更大的特性，如果频繁的读取和存储数据，而数据有json，有字符串，就会照成大量代码冗余，封装一起就看起来好很多
 
 - 不参与网络传输。一般用于性能优化，可以保存图片、js、css、html 模板、大量数据。
+
+- ```
+  localStorage.getItem()
+  localStorage.setItem()
+  localStorage.removeItem()
+  localStorage.clear()
+  ```
+
+  
 
 #### cookie和session的区别
 

@@ -118,3 +118,6 @@ Promise.prototype.then = function(onFufilled,onRejected){
 
 
 
+
+
+、
